@@ -1,0 +1,15 @@
+/Users/darren/Projects/ToolLibrary/ToolLibrary/bin/Debug/net7.0/ToolLibrary
+/Users/darren/Projects/ToolLibrary/ToolLibrary/bin/Debug/net7.0/ToolLibrary.deps.json
+/Users/darren/Projects/ToolLibrary/ToolLibrary/bin/Debug/net7.0/ToolLibrary.runtimeconfig.json
+/Users/darren/Projects/ToolLibrary/ToolLibrary/bin/Debug/net7.0/ToolLibrary.dll
+/Users/darren/Projects/ToolLibrary/ToolLibrary/bin/Debug/net7.0/ToolLibrary.pdb
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ToolLibrary.csproj.AssemblyReference.cache
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ToolLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ToolLibrary.AssemblyInfoInputs.cache
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ToolLibrary.AssemblyInfo.cs
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ToolLibrary.csproj.CoreCompileInputs.cache
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ToolLibrary.dll
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/refint/ToolLibrary.dll
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ToolLibrary.pdb
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ToolLibrary.genruntimeconfig.cache
+/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/Debug/net7.0/ref/ToolLibrary.dll
