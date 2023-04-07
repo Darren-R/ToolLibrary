@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/darren/Projects/ToolLibrary/ToolLibrary/ToolLibrary.csproj",
+      "projectUniqueName": "/Users/darren/Desktop/Algorithms and data structures/ToolLibrary/ToolLibrary/ToolLibrary.csproj",
       "projectName": "ToolLibrary",
-      "projectPath": "/Users/darren/Projects/ToolLibrary/ToolLibrary/ToolLibrary.csproj",
+      "projectPath": "/Users/darren/Desktop/Algorithms and data structures/ToolLibrary/ToolLibrary/ToolLibrary.csproj",
       "packagesPath": "/Users/darren/.nuget/packages/",
-      "outputPath": "/Users/darren/Projects/ToolLibrary/ToolLibrary/obj/",
+      "outputPath": "/Users/darren/Desktop/Algorithms and data structures/ToolLibrary/ToolLibrary/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/darren/.nuget/NuGet/NuGet.Config"

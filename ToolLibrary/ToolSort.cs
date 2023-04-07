@@ -1,35 +1,42 @@
 ﻿public class ToolSort
 {
-    public static ToolNode BubbleSortTools(ToolNode toolHead)
+    public static ToolNode InsertionSortTools(ToolNode toolHead)
     {
         if (toolHead == null || toolHead.Next == null)
         {
             return toolHead;
         }
 
-        ToolNode current;
-        ToolNode next;
-        Tool tempTool;
+        ToolNode sortedHead = null;
 
-        bool swapped;
-        do
+        while (toolHead != null)
         {
-            current = toolHead;
-            swapped = false;
-            while (current.Next != null)
-            {
-                next = current.Next;
-                if (string.Compare(current.Tool.Name, next.Tool.Name) > 0)
-                {
-                    tempTool = current.Tool;
-                    current.Tool = next.Tool;
-                    next.Tool = tempTool;
-                    swapped = true;
-                }
-                current = current.Next;
-            }
-        } while (swapped);
+            ToolNode currentNode = toolHead;
+            toolHead = toolHead.Next;
 
-        return toolHead;
+            sortedHead = InsertSorted(sortedHead, currentNode);
+        }
+
+        return sortedHead;
+    }
+
+    private static ToolNode InsertSorted(ToolNode sortedHead, ToolNode newNode)
+    {
+        if (sortedHead == null || string.Compare(sortedHead.Tool.Name, newNode.Tool.Name) >= 0)
+        {
+            newNode.Next = sortedHead;
+            return newNode;
+        }
+        else
+        {
+            ToolNode currentNode = sortedHead;
+            while (currentNode.Next != null && string.Compare(currentNode.Next.Tool.Name, newNode.Tool.Name) < 0)
+            {
+                currentNode = currentNode.Next;
+            }
+            newNode.Next = currentNode.Next;
+            currentNode.Next = newNode;
+        }
+        return sortedHead;
     }
 }

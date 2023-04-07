@@ -57,7 +57,7 @@
             currentNode.Next = newNode;
         }
 
-        ToolHead = ToolSort.BubbleSortTools(ToolHead);
+        ToolHead = ToolSort.InsertionSortTools(ToolHead);
     }
 
 
@@ -92,7 +92,7 @@
         {
             Tool newTool = new Tool(name, description, type, quantity);
             AddTool(newTool);
-            Console.WriteLine($"Added new tool: {name}");
+            Console.WriteLine($"Added new tool: {name}\n");
         }
     }
 
@@ -148,18 +148,26 @@
             currentNode = currentNode.Next;
         }
 
-        if (tool.Quantity == 0)
+        if (tool == null)
         {
-            Console.WriteLine($"Tool not available: {toolName}");
-            return;
+            Console.WriteLine($"{toolName} was not found in the library\n");
         }
-
-        tool.Quantity--;
-        Borrower borrower = new Borrower(fullName, phoneNumber, tool);
-        AddBorrower(new BorrowerNode(borrower));
-        Console.WriteLine($"Lent tool {toolName} to {fullName}");
-        BorrowerHead.PrintBorrowers();
+        else if (tool.Quantity == 0)
+        {
+            Console.WriteLine($"{toolName} is not available\n");
+        }
+        else
+        {
+            tool.Quantity--;
+            Borrower borrower = new Borrower(fullName, phoneNumber, tool);
+            AddBorrower(new BorrowerNode(borrower));
+            Console.WriteLine($"Lent the {toolName} to {fullName}\n");
+            /* Testing the borrower had been input correctly
+             BorrowerHead.PrintBorrowers();
+            */
+        }
     }
+
 
     public void ReturnTool(string toolName, string toolType, string fullName)
     {
@@ -186,14 +194,16 @@
 
         if (borrowerNode == null)
         {
-            Console.WriteLine($"Borrower not found: {fullName}");
+            Console.WriteLine($"Borrower not found: {fullName}\n");
             return;
         }
 
         tool.Quantity++;
         var nodeToRemove = borrowerNode;
         BorrowerHead = BorrowerHead.Remove(nodeToRemove);
-        Console.WriteLine($"Returned tool {toolName} from {fullName}");
+        Console.WriteLine($"Returned the {toolName} from {fullName}\n");
+
+        /* Testing if the borrowers were being removed correctly
         if (BorrowerHead != null)
         {
             BorrowerHead.PrintBorrowers();
@@ -202,6 +212,7 @@
         {
             Console.WriteLine("No tools currently outstanding");
         }
+        */
     }
 
 
@@ -223,11 +234,11 @@
 
         if (selectedTools.Count == 0)
         {
-            Console.WriteLine($"No tools found of type: {type}\n");
+            Console.WriteLine($"\nNo {type} found.\n");
             return;
         }
 
-        Console.WriteLine($"Tools of type: {type}");
+        Console.WriteLine($"\nHere are the {type}");
         foreach (var tool in selectedTools)
         {
             string availability = tool.Quantity > 0 ? "Available" : "Not Available";
